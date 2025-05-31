@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+:root{
+  --cor-principal: #16FF8F;
+  --cor-escura: #2D3330;
+  --cor-clara: #BCF7DB ;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @media all and (min-width: 450px) {
 
 body {
@@ -13,22 +24,37 @@ body {
 }
 
 header {
-  background: #009688;
+  background: var(--cor-principal);
   color: white;
   padding: 1rem 2rem;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }
+  header .logo-img, header .logo{
+    flex: 0 0 50%;
+  }
+  header nav{
+    flex: 1;
+  }
+
+header img { 
+  width: 5%;
+  height: auto;
+}
 
 header .logo {
-  font-size: 1.8rem;
+  font-size: 4rem;
   font-weight: bold;
+  padding: 3%;
 }
 
 header nav ul {
+  font-weight: bold;
   list-style: none;
   display: flex;
+  width: 1000px;
 }
 
 header nav ul li {
