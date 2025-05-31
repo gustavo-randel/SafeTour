@@ -32,6 +32,8 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+/*lembrar de tirar o nav de dentro do header e usar valores em % pra não me preocupar com o layout depois*/
   header .logo-img, header .logo{
     flex: 0 0 50%;
   }
