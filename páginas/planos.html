@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planos</title>
-    <link rel="stylesheet" href="estilos paginas/planos-style.css">
+    <link rel="stylesheet" href="estilos paginas/planos-style.css" />
     <script src="javascript paginas/planos.js" defer></script>
   </head>
   <body>
@@ -17,9 +17,9 @@
       <ul>
         <!-- fazer o link mandar especificamente para os ids. href= "pagina.html#id" -->
         <li><a href="/index.html">Início</a></li>
-        <li><a href="#">Mapa</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
         <li><a href="planos.html">Planos</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li id="contact"><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
 
@@ -27,45 +27,49 @@
       <button>Alternar Dark Mode</button>
     </div>
 
-    <section class="plans">
-      <div class="plan free">
-        <h2>Plano Gratuito</h2>
-        <ul>
-          <li>✅ Acesso às recomendações</li>
-          <li>✅ Acesso aos mapas</li>
-          <li>✅ Acesso às avaliações de clientes</li>
-          <li>❌ Notificações em segundo plano</li>
-          <li>⏳ 7 dias de uso</li>
-        </ul>
-        <button class="select-btn" data-plan="Gratuito">
-          Selecionar Gratuito
-        </button>
-      </div>
+    <div class="wrapper">
+      <main>
+        <section class="plans">
+          <div class="plan free">
+            <h2>Plano Gratuito</h2>
+            <ul>
+              <li>✅ Acesso às recomendações</li>
+              <li>✅ Acesso aos mapas</li>
+              <li>✅ Acesso às avaliações de clientes</li>
+              <li>❌ Notificações em segundo plano</li>
+              <li>⏳ 7 dias de uso</li>
+            </ul>
+            <button class="select-btn" data-plan="Gratuito">
+              Selecionar Gratuito
+            </button>
+          </div>
 
-      <div class="plan premium">
-        <h2>Plano Premium</h2>
-        <ul>
-          <li>✅ Acesso às recomendações</li>
-          <li>✅ Acesso aos mapas</li>
-          <li>✅ Acesso às avaliações de clientes</li>
-          <li>✅ Notificações em segundo plano</li>
-          <li>🔓 Acesso ilimitado</li>
-        </ul>
-        <button class="select-btn" data-plan="Premium">
-          Selecionar Premium
-        </button>
-      </div>
-    </section>
+          <div class="plan premium">
+            <h2>Plano Premium</h2>
+            <ul>
+              <li>✅ Acesso às recomendações</li>
+              <li>✅ Acesso aos mapas</li>
+              <li>✅ Acesso às avaliações de clientes</li>
+              <li>✅ Notificações em segundo plano</li>
+              <li>🔓 Acesso ilimitado</li>
+            </ul>
+            <button class="select-btn" data-plan="Premium">
+              Selecionar Premium
+            </button>
+          </div>
+        </section>
 
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <p id="modal-message"></p>
-        <button id="confirm-btn">Confirmar</button>
-        <button id="cancel-btn">Cancelar</button>
-      </div>
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <p id="modal-message"></p>
+            <button id="confirm-btn">Confirmar</button>
+            <button id="cancel-btn">Cancelar</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2025 SafeTour. Todos os direitos reservados.</p>
+      </footer>
     </div>
-    <footer>
-      <p>&copy; 2025 SafeTour. Todos os direitos reservados.</p>
-    </footer>
   </body>
 </html>

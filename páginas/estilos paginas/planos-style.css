@@ -103,7 +103,17 @@ html {
     filter: brightness(0.9);
     color: var(--cor-escura);
   }
+  
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
 
+main {
+  flex: 1; 
+  padding: 20px;
+}
   .plans {
     display: flex;
     justify-content: center;
