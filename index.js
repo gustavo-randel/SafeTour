@@ -11,7 +11,7 @@ toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 });
 
-// Newsletter
+// Contact
 document.getElementById('contact').addEventListener('click', function(e) {
   e.preventDefault();
   alert('Pagina em construção!');
