@@ -5,6 +5,12 @@ toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 });
 
+// Contact
+document.getElementById('contact').addEventListener('click', function(e) {
+  e.preventDefault();
+  alert('Pagina em construção!');
+});
+
 // Modal
   const modal = document.getElementById('modal');
   const modalMessage = document.getElementById('modal-message');
