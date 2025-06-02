@@ -74,6 +74,27 @@
               ></textarea>
               <button id="submit">Enviar Avaliação</button>
               <div id="result"></div>
+              <div class="reviews">
+                <h2>Avaliações de outros usuários:</h2>
+
+                <div class="review">
+                  <strong>Maria:</strong>
+                  <div class="review-stars">⭐⭐⭐⭐☆</div>
+                  <p>Cardápio muito bom, recomendo!</p>
+                </div>
+
+                <div class="review">
+                  <strong>João:</strong>
+                  <div class="review-stars">⭐⭐⭐☆☆</div>
+                  <p>Atendeu as expectativas, mas pode melhorar.</p>
+                </div>
+
+                <div class="review">
+                  <strong>Ana:</strong>
+                  <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                  <p>Perfeito! Comida chegou rápido e era saborosa.</p>
+                </div>
+              </div>
             </div>
           </aside>
         </article>
@@ -101,6 +122,24 @@
             target="_blank"
             >Leia mais</a
           >
+          <aside>
+            <div class="rating-system">
+              <h2>Avalie este local</h2>
+              <div class="stars">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <textarea
+                id="comment"
+                placeholder="Deixe seu comentário..."
+              ></textarea>
+              <button id="submit">Enviar Avaliação</button>
+              <div id="result"></div>
+            </div>
+          </aside>
         </article>
         <h1>Habitações</h1>
         <article id="rj">
@@ -114,11 +153,11 @@
         </article>
       </section>
 
-      <aside>
+      <aside id="categories">
         <h3>Categorias</h3>
         <ul>
           <li><a href="#restaurants">Restaurantes</a></li>
-          <li><a href="#">Pontos turísticos</a></li>
+          <li><a href="#touristic-points">Pontos turísticos</a></li>
           <li><a href="#">Habitações</a></li>
         </ul>
       </aside>
