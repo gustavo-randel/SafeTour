@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: #16ff8f;
+  --cor-escura: #2d3330;
+  --cor-clara: #bcf7db;
+  --cor-destaque: #69f5cb;
+  --cor-extra: #50c787;
+  -cor-escura-extra: #355250;
+  --tom-branco: #f2faf5;
+  --fonte: "Ubuntu", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media all and (min-width: 450px) {
+  body {
+    font-family: var(--fonte);
+    background: var(--tom-branco);
+    color: #333;
+  }
+
+  header {
+    background: var(--cor-principal);
+    color: var(--cor-escura);
+    padding: 1rem 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header img {
+    width: 40%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  header .logo {
+    margin-left: -40px;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    font-weight: bolder;
+    font-size: 1.2em;
+    list-style: none;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+  }
+
+  nav ul li {
+    margin-left: 1rem;
+  }
+
+  nav ul li a {
+    color: var(--cor-escura);
+    text-decoration: none;
+  }
+
+  .dark-mode {
+    display: inline-block;
+  }
+
+  div button {
+    height: 50px;
+    width: 120px;
+    background-color: var(--cor-destaque);
+    border-radius: 0.3rem;
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 1%;
+    transition: 0.15s;
+    display: flex;
+    color: var(--tom-branco);
+  }
+
+  button:hover {
+    filter: brightness(0.9);
+    color: var(--cor-escura);
+  }
+
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .plan {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+
+  .plan h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: left;
+  }
+
+  .plan ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: var(--cor-clara);
+  }
+
+  .plan.premium {
+    border: 2px solid gold;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: var(--tom-branco);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .modal-content button {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  #toggle-dark-mode {
+    color: var(--tom-branco);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  body.dark {
+    background: var(--cor-escura);
+  }
+
+  body.dark header {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+  }
+
+  body.dark a {
+    color: var(--cor-extra);
+  }
+
+  body.dark nav {
+    background-color: var(--cor-escura);
+  }
+
+  body.dark button {
+    color: var(--cor-escura);
+  }
+  body.dark button:hover {
+    color: var(--tom-branco);
+  }
+  body.dark footer {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+  }
+
+  body.dark .plans{
+    columns: var(--cor-escura);
+    background-color: var(--cor-escura);
+    border: var(--cor-destaque);
+  }
+  body.dark .modal-content{
+    background-color: var(--cor-escura);
+  }
+}
+
+@media all and (min-width: 767px) {
+  header img {
+    width: 15%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  header .logo {
+    font-size: 4.5em;
+    font-weight: bold;
+  }
+}
