@@ -1,3 +1,7 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +12,11 @@
   --cor-principal: #16FF8F;
   --cor-escura: #2D3330;
   --cor-clara: #BCF7DB ;
-
+  --cor-destaque: #69F5CB;
+  --cor-extra: #50C787;
+  -cor-escura-extra: #355250;
+  --tom-branco: #f2faf5;
+  --fonte: 'Ubuntu', sans-serif; 
 }
 
 html {
@@ -18,72 +26,98 @@ html {
 @media all and (min-width: 450px) {
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: var(--fonte);
+  background: var(--tom-branco);
   color: #333;
 }
 
 header {
   background: var(--cor-principal);
-  color: white;
-  padding: 1rem 2rem;
+  color: var(--cor-escura);
+  padding: 1rem 3rem;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-/*lembrar de tirar o nav de dentro do header e usar valores em % pra não me preocupar com o layout depois*/
-  header .logo-img, header .logo{
-    flex: 0 0 50%;
-  }
-  header nav{
-    flex: 1;
+  header img { 
+    width: 40%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    
   }
 
-header img { 
-  width: 5%;
-  height: auto;
+  header .logo {
+    margin-left: -40px;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+nav{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header .logo {
-  font-size: 4rem;
-  font-weight: bold;
-  padding: 3%;
-}
+nav ul {
+    font-weight: bolder;
+    font-size: 1.2em;
+    list-style: none;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+  }
 
-header nav ul {
-  font-weight: bold;
-  list-style: none;
+nav ul li {
+    margin-left: 1rem;
+  }
+
+nav ul li a {
+    color: var(--cor-escura);
+    text-decoration: none;
+
+  }
+  
+  .dark-mode{
+    display: inline-block;
+    
+  }
+
+  div button {
+  height: 50px;
+  width: 120px;
+  background-color: var(--cor-destaque);
+  border-radius: .3rem;
+  border: none;
+  font-weight: 700; 
+  padding: .5rem 1rem;
+  margin: 1%;
+  transition: .15s;
   display: flex;
-  width: 1000px;
-}
+ 
+  color: var(--tom-branco);
+  }
 
-header nav ul li {
-  margin-left: 1rem;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.banner {
-  background: url('https://source.unsplash.com/1200x400/?travel') no-repeat center/cover;
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-}
+    button:hover {
+    filter: brightness(0.9);
+    color: var(--cor-escura);
+    }
 
 main {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1.9rem;
+  padding: 1rem;
 }
 
 .articles article {
-  background: white;
+  background: var(--tom-branco);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -91,7 +125,8 @@ main {
 }
 
 .articles article img {
-  width: 100%;
+  width: 42vw;
+  height: 30vw;
   border-radius: 8px;
 }
 
@@ -107,19 +142,24 @@ main {
 .articles article a {
   display: inline-block;
   margin-top: 0.5rem;
-  color: #009688;
+  color: var(--cor-extra);
   text-decoration: none;
 }
 
 aside {
-  background: white;
+  position: relative;
+  background: var(--tom-branco);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 25%;
+  text-align: center;
 }
+
 
 aside h3 {
   margin-bottom: 1rem;
+  font-weight: bolder;
 }
 
 aside ul {
@@ -127,17 +167,17 @@ aside ul {
 }
 
 aside ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 aside ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--cor-extra);
 }
 
 footer {
-  background: #333;
-  color: white;
+  background: var(--cor-escura);
+  color: var(--tom-branco);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
@@ -162,40 +202,81 @@ footer {
 .newsletter button {
   padding: 0.5rem 1rem;
   border: none;
-  background: #009688;
-  color: white;
+  background: var(--cor-destaque);
+  color: var(--tom-branco);
   border-radius: 4px;
   cursor: pointer;
 }
 
+/* Dark mode */
+
 #toggle-dark-mode {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #009688;
-  color: white;
+  color: var(--tom-branco);
   border: none;
   padding: 0.7rem 1rem;
   border-radius: 50%;
   cursor: pointer;
 }
 
-/* Dark mode */
 body.dark {
-  background: #121212;
-  color: #f5f5f5;
+  background: var(--cor-escura);
+  color: var(--tom-branco);
 }
 
 body.dark header,
-body.dark footer,
 body.dark .newsletter,
+body.dark .newsletter input,
 body.dark aside,
 body.dark .articles article {
-  background: #1e1e1e;
-  color: #f5f5f5;
+  background: var(--cor-escura);
+  color: var(--tom-branco);
 }
 
 body.dark a {
-  color: #80cbc4;
+  color: var(--cor-extra);
+}
+
+body.dark nav {
+  background-color: var(--cor-escura);
+}
+
+body.dark button{
+  color: var(--cor-escura);
+}
+body.dark button:hover{
+  color: var(--tom-branco);
+}
+body.dark footer{
+  background-color: var(--cor-clara);
+  color: var(--cor-escura);
+}
+}
+
+@media all and (min-width: 767px) {
+    header img { 
+    width: 15%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  header .logo {
+    font-size: 4.5em;
+    font-weight: bold;
+  }
+  
+  .articles article img {
+  width: 21vw;
+  height: 15vw;
+  border-radius: 8px;
+  }
+
+aside {
+  position: relative;
+  background: var(--tom-branco);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 50%;
 }
 }

@@ -8,31 +8,46 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-
 <header>
   <img src="imagens/logo-png.png" alt="Logo-SafeTour" id="logo-img">
-  
   <div class="logo">SafeTour</div>
-  <nav>
-    <ul>
-      <li><a href="#">Início</a></li>
-      <li><a href="#rj">Recomendações</a></li>
-      <li><a href="#">Mapa</a></li>
-      <li><a href="#">Planos</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
 </header>
+
+  <nav>
+      <ul>
+        <!-- fazer o link mandar especificamente para os ids. href= "pagina.html#id" -->
+        <li><a href="#">Início</a></li>
+        <li><a href="páginas/mapa.html">Mapa</a></li>
+        <li><a href="#">Planos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+
+  <div id="toggle-dark-mode" class="dark-mode">  
+  <button >Alternar Dark Mode</button>
+  </div>
 
 <main>
   <section class="articles">
+    <h1 id="restaurants">Restaurantes</h1>
     <article>
-      <img src="https://source.unsplash.com/600x400/?paris" alt="Paris">
-      <h2>Historia de salvador</h2>
-      <p></p>
-      <a href="#">Leia mais</a>
+      <img src="https://restaurantebarravento.com.br/bv/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-15-at-22.00.46-1.jpeg" alt="Barravento">
+      <img src="https://restaurantebarravento.com.br/bv/wp-content/uploads/2022/03/slide2.jpg" alt="Barravento">
+
+      <h2>Barravento</h2>
+      <p>"Descubra a sofisticação gastronômica à beira-mar no Barravento, um restaurante de renome situado na deslumbrante Barra de Salvador. Desfrute de uma experiência culinária única, onde os sabores autênticos da Bahia se encontram com toques contemporâneos em cada prato. Nossa equipe apaixonada está dedicada a oferecer um serviço impecável em um ambiente elegante e acolhedor. Do nascer ao pôr do sol, permita-se ser levado em uma jornada sensorial incomparável. Seja para um jantar romântico à luz de velas ou um almoço descontraído com amigos, o Barravento é o local ideal para celebrar momentos especiais e criar memórias inesquecíveis. Sinta a brisa do oceano, saboreie os melhores ingredientes locais e entregue-se a uma experiência gastronômica."</p>
+      <a href="https://restaurantebarravento.com.br/bv/" target="_blank">Leia mais</a>
     </article>
 
+    <h1 id="touristic-points">Pontos Turísticos</h1>
+    <article>
+      <img src="https://mobilidade.estadao.com.br/wp-content/uploads/2024/12/Imagem-destacada-Mobilidade-2024-12-09T165847.906.jpg.webp" alt="Elevador Lacerda">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Entardecer_elevedor_lacerda.jpg/1920px-Entardecer_elevedor_lacerda.jpg" alt="Elevador Lacerda">
+      <h2>Elevador</h2>
+      <p>O Elevador Lacerda é um dos mais icônicos cartões postais de Salvador. Há mais de 150 anos, a construção desempenha um papel duplo de ponto turístico e meio de transporte, conectando a Cidade Alta à Cidade Baixa na capital da Bahia. Em seu ponto mais alto, o elevador tem vista panorâmica para a Baía de Todos os Santos.</p>
+      <a href="https://pt.wikipedia.org/wiki/Elevador_Lacerda" target="_blank">Leia mais</a>
+    </article>
+    <h1>Habitações</h1>
     <article id="rj">
       <img src="https://source.unsplash.com/600x400/?rio" alt="Rio de Janeiro">
       <h2>Relação da cidade com o turismo</h2>
@@ -43,9 +58,8 @@
 
   <aside>
     <h3>Categorias</h3>
-    <!-- fazer o link mandar especificamente para os ids. href= "pagina.html#id" -->
     <ul>
-      <li><a href="#">Restaurantes</a></li>
+      <li><a href="#restaurants">Restaurantes</a></li>
       <li><a href="#">Pontos turísticos</a></li>
       <li><a href="#">Habitações</a></li>
     </ul>
@@ -58,13 +72,10 @@
   </form>
 </section>
 
-<button id="toggle-dark-mode">Alternar Dark Mode</button>
-
-
 </main>
  
 <footer>
-  <p>&copy; 2025 Viaje na Viagem. Todos os direitos reservados.</p>
+  <p>&copy; 2025 SafeTour. Todos os direitos reservados.</p>
 </footer>
 
 </body>
