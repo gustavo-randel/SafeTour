@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@media all and (max-width: 480px) {
+@media all and (min-width: 320px) {
   body {
     font-family: var(--fonte);
     background: var(--tom-branco);
