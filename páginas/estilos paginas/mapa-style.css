@@ -30,6 +30,128 @@ html {
     color: #333;
   }
 
+header {
+  color: var(--cor-escura);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+  header img {
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-extra);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    font-weight: bolder;
+    font-size: .8em;
+    list-style: none;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px 20px 0px;
+  }
+
+  nav ul li {
+    margin-left: .5rem;
+  }
+
+  nav ul li a {
+    background-color: var(--cor-principal);
+    color: #333;
+    text-decoration: none;
+    padding: 14px;
+    border: none;
+    border-radius: .3rem;
+  }
+  nav ul li a:hover {
+    color: var(--tom-branco);
+    transition: 0.5s;
+  }
+
+  .dark-mode {
+    display: inline-block;
+  }
+
+  div button {
+    height: 40px;
+    width: 100px;
+    background-color: var(--cor-principal);
+    border-radius: 0.3rem;
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 5%;
+    transition: 0.15s;
+    display: flex;
+    font-size: .7rem;
+  }
+
+  button:hover {
+    filter: brightness(0.95);
+    color: var(--tom-branco);
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  main h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  .articles article {
+    background: var(--tom-branco);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+
+  iframe {
+    width: 280px;
+    height: 280px;
+    gap: -1rem;
+  }
+
+
+  footer {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+    text-align: center;
+    padding: .8rem;
+    margin-top: 2rem;
+    font-size: .7rem;
+  }
+
+}
+
+@media all and (min-width: 480px) {
+  body {
+    font-family: var(--fonte);
+    background: var(--tom-branco);
+    color: #333;
+  }
+
   header {
   color: var(--cor-escura);
   display: flex;
@@ -113,6 +235,7 @@ html {
     gap: 1rem;
     padding: 1rem;
   }
+
   iframe {
     width: 440px;
     height: 280px;
@@ -214,6 +337,7 @@ html {
     padding: 0px;
     margin: 0px;
   }
+  
   iframe {
     width: 640px;
     height: 480px;

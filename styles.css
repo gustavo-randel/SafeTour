@@ -59,26 +59,26 @@ header {
 
   nav ul {
     font-weight: bolder;
-    font-size: 1.2em;
+    font-size: .8em;
     list-style: none;
     display: flex;
-    width: 1000px;
+    width: 800px;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 10px 20px 0px;
   }
 
   nav ul li {
-    margin-left: 1rem;
+    margin-left: .5rem;
   }
 
   nav ul li a {
     background-color: var(--cor-principal);
     color: #333;
     text-decoration: none;
-    padding: 15px;
+    padding: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: .3rem;
   }
   nav ul li a:hover {
     color: var(--tom-branco);
@@ -90,16 +90,17 @@ header {
   }
 
   div button {
-    height: 50px;
-    width: 120px;
+    height: 40px;
+    width: 100px;
     background-color: var(--cor-principal);
     border-radius: 0.3rem;
     border: none;
     font-weight: 700;
     padding: 0.5rem 1rem;
-    margin: 1%;
+    margin: 5%;
     transition: 0.15s;
     display: flex;
+    font-size: .7rem;
   }
 
   button:hover {
@@ -107,11 +108,10 @@ header {
     color: var(--tom-branco);
   }
 
-
   main {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 1.9rem;
+    display: flex;
+   flex-direction: column-reverse;
+    gap: 1rem;
     padding: 1rem;
   }
 
@@ -124,18 +124,19 @@ header {
   }
 
   .articles article img {
-    width: 42vw;
-    height: 30vw;
+    width: 56vw;
+    height: 38vw;
     border-radius: 8px;
   }
 
   .articles article h2 {
     margin-top: 0.5rem;
-    font-size: 1.5rem;
+    font-size: .8rem;
   }
 
   .articles article p {
     margin: 0.5rem 0;
+    font-size: .7rem;
   }
 
   .articles article a {
@@ -143,6 +144,7 @@ header {
     margin-top: 0.5rem;
     color: var(--cor-extra);
     text-decoration: none;
+    font-size: .9rem;
   }
 
   aside {
@@ -175,7 +177,6 @@ header {
   }
 
   aside ul li a:hover{
-      text-decoration: none;
       color: var(--cor-destaque);
     }
 
@@ -218,9 +219,11 @@ header {
     background: var(--cor-escura);
     color: var(--tom-branco);
     text-align: center;
-    padding: 1rem;
+    padding: .8rem;
     margin-top: 2rem;
+    font-size: .7rem;
   }
+
   .newsletter {
     background: white;
     padding: 1rem;
@@ -231,8 +234,9 @@ header {
   }
 
   .newsletter input {
+    margin: .5rem;
     padding: 0.5rem;
-    width: 60%;
+    width: 80%;
     margin-right: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
