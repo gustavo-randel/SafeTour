@@ -119,6 +119,7 @@ header {
     margin-bottom: 1rem;
     font-size: 2rem;
   }
+
   .articles article {
     background: var(--tom-branco);
     padding: 1rem;
@@ -141,6 +142,55 @@ header {
     padding: .8rem;
     margin-top: 2rem;
     font-size: .7rem;
+  }
+
+  /* Dark Mode */
+
+    #toggle-dark-mode {
+    color: var(--tom-branco);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  body.dark {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+  }
+
+  body.dark header,
+  body.dark aside,
+  body.dark .articles article {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+  }
+
+    body.dark nav a {
+    color: var(--cor-clara);
+    background-color: var(--cor-extra);
+  }
+
+  body.dark nav a:hover {
+    color: var(--cor-escura);
+    
+  }
+
+  body.dark nav {
+    background-color: var(--cor-escura);
+  }
+
+  body.dark button {
+    color: var(--tom-branco);
+    background-color: var(--cor-extra);
+  }
+  body.dark button:hover {
+    color: var(--cor-escura);
+  }
+
+  body.dark footer {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
   }
 
 }
@@ -268,53 +318,6 @@ header {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-  }
-
-  #toggle-dark-mode {
-    color: var(--tom-branco);
-    border: none;
-    padding: 0.7rem 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  body.dark {
-    background: var(--cor-escura);
-    color: var(--tom-branco);
-  }
-
-  body.dark header,
-  body.dark aside,
-  body.dark .articles article {
-    background: var(--cor-escura);
-    color: var(--tom-branco);
-  }
-
-    body.dark nav a {
-    color: var(--cor-clara);
-    background-color: var(--cor-extra);
-  }
-
-  body.dark nav a:hover {
-    color: var(--cor-escura);
-    
-  }
-
-  body.dark nav {
-    background-color: var(--cor-escura);
-  }
-
-  body.dark button {
-    color: var(--tom-branco);
-    background-color: var(--cor-extra);
-  }
-  body.dark button:hover {
-    color: var(--cor-escura);
-  }
-
-  body.dark footer {
-    background-color: var(--cor-clara);
-    color: var(--cor-escura);
   }
 }
 

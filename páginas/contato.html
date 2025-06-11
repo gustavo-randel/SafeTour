@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-      <link rel="stylesheet" href="estilos paginas/planos-style.css" />
-    <script src="javascript paginas/planos.js" defer></script>
+      <link rel="stylesheet" href="estilos paginas/contato-style.css" />
 </head>
 <body>
-    
+  <header>
+      <img src="/imagens/logo-final.jpg" alt="Logo SafeTour">
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/index.html#toggle-dark-mode">Início</a></li>
+        <li><a href="mapa.html#toggle-dark-mode">Mapa</a></li>
+        <li><a href="planos.html#toggle-dark-mode">Planos</a></li>
+        <li id="contact"><a href="#toggle-dark-mode">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div id="toggle-dark-mode" class="dark-mode">
+      <button>Alternar Dark Mode</button>
+
+    </div>
+     <main>
+        <article class="articles">
+          <h2>Venha ampliar o alcance do seu restaurante, loja, hotel ou pousada conosco</h2>
+        </article>
+       <article class="articles">
+         <form action="#" method="post">
+
+          <label for="nome-empresa">Nome da Empresa:</label>
+          <input type="text" id="nome-empresa" name="nome_empresa" required>
+
+          <label for="servico">Serviço oferecido:</label>
+          <input type="text" id="servico" name="servico" required>
+
+          <label for="cnpj">CNPJ:</label>
+          <input type="text" id="cnpj" name="cnpj" pattern="\d{14}" placeholder="Somente números" required>
+          <label for="info-adicional">Informações Adicionais de Contato:</label>
+
+          <textarea id="info-adicional" name="info_adicional" rows="5" placeholder="Telefone, e-mail, pessoa para contato, etc."></textarea>
+
+          <button class="submit" type="submit">Enviar</button>
+       </article>
+           </form>
+     </main>
 </body>
 </html>

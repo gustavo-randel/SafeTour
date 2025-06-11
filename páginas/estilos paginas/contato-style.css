@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: #16ff8f;
+  --cor-escura: #2d3330;
+  --cor-clara: #bcf7db;
+  --cor-destaque: #69f5cb;
+  --cor-extra: #50c787;
+  -cor-escura-extra: #355250;
+  --tom-branco: #f2faf5;
+  --fonte: "Ubuntu", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media all and (min-width: 320px) {
+  body {
+    font-family: var(--fonte);
+    background: var(--tom-branco);
+    color: #333;
+  }
+
+header {
+  color: var(--cor-escura);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+  header img {
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--cor-extra);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    font-weight: bolder;
+    font-size: .8em;
+    list-style: none;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px 20px 0px;
+  }
+
+  nav ul li {
+    margin-left: .5rem;
+  }
+
+  nav ul li a {
+    background-color: var(--cor-principal);
+    color: #333;
+    text-decoration: none;
+    padding: 14px;
+    border: none;
+    border-radius: .3rem;
+  }
+
+  nav ul li a:hover {
+    color: var(--tom-branco);
+    transition: 0.5s;
+  }
+
+  .dark-mode {
+    display: inline-block;
+  }
+
+  div button {
+    height: 40px;
+    width: 100px;
+    background-color: var(--cor-principal);
+    border-radius: 0.3rem;
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    margin: 5%;
+    transition: 0.15s;
+    display: flex;
+    font-size: .7rem;
+  }
+
+  button:hover {
+    filter: brightness(0.95);
+    color: var(--tom-branco);
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  main h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .articles article {
+    background: var(--tom-branco);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }   
+   
+    .container {
+      max-width: 600px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--cor-escura);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    input {
+        background-color: var(--tom-branco);
+        color: var(--tom-branco);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+     .articles button  {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: var(--cor-principal);
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Dark mode */
+
+  #toggle-dark-mode {
+    color: var(--tom-branco);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  body.dark {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+  }
+
+  body.dark .articles article {
+    background: var(--cor-escura);
+    color: var(--tom-branco);
+  }
+
+  body.dark nav a {
+    color: var(--cor-clara);
+    background-color: var(--cor-extra);
+  }
+
+  body.dark nav a:hover {
+    color: var(--cor-escura);
+    
+  }
+
+  body.dark nav {
+    background-color: var(--cor-escura);
+  }
+
+  body.dark button {
+    color: var(--tom-branco);
+    background-color: var(--cor-extra);
+  }
+
+  body.dark label {
+    color: var(--cor-clara);
+  }
+
+  body.dark button:hover {
+    color: var(--cor-escura);
+  }  
+  
+  body.dark textarea{
+    color: var(--tom-branco);
+    background-color: var(--cor-escura);
+    border: 1px solid var(--cor-clara);
+  }
+
+  body.dark input {
+    background-color: var(--cor-escura);
+  }
+
+  body.dark footer {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+  }
+}
