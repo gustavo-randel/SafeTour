@@ -93,7 +93,7 @@ header {
     height: 40px;
     width: 100px;
     background-color: var(--cor-principal);
-    color: black;
+    color: var(--cor-escura);
     border-radius: 0.3rem;
     border: none;
     font-weight: 700;
@@ -187,6 +187,7 @@ header {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    color: var(--cor-escura);
   }
 
   textarea {
@@ -249,6 +250,7 @@ header {
     background: var(--cor-principal);
     border-radius: 4px;
     cursor: pointer;
+    color: var(--cor-escura);
   }
 
   /* Dark mode */
